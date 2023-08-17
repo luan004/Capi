@@ -1,4 +1,4 @@
-// CAPI - v1.0
+// CAPI - v1.1
 // author
 // github.com/luan004
 
