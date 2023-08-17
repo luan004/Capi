@@ -30,7 +30,7 @@ function createModel(data) {
 }
 
 const model = createModel(data);
-const sentence = go(input, model, maxlenght);
+const sentence = go(input, model, maxlenght-1);
 const sentencelenght = sentence.split(' ').length;
 
 console.log('\x1b[32m%s\x1b[0m','INPUT: ' + input + ' | MAXLENGHT: ' + maxlenght + '| LENGHT: ' + sentencelenght);
