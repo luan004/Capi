@@ -1,6 +1,6 @@
 const fs = require('fs');
 
-// CAPI - v1.2
+// CAPI - v1.3
 // author
 // github.com/luan004
 
@@ -8,6 +8,7 @@ const fs = require('fs');
 a geração de um novo texto aleatório, quanto maior
 for o texto data, mais aleatório será o resultado. */
 const data = fs.readFileSync('data', 'utf8');
+const datasize = fs.statSync('data').size;
 
 /* Insira na constante input a palavra inicial do
 texto que será gerado. */
@@ -33,7 +34,7 @@ const model = createModel(data);
 const sentence = go(input, model, maxlenght-1);
 const sentencelenght = sentence.split(' ').length;
 
-console.log('\x1b[32m%s\x1b[0m','INPUT: ' + input + ' | MAXLENGHT: ' + maxlenght + '| LENGHT: ' + sentencelenght);
+console.log('\x1b[32m%s\x1b[0m','INPUT: ' + input + ' | MAXLENGHT: ' + maxlenght + '| LENGHT: ' + sentencelenght + ' | DATA SIZE: ' + datasize + ' bytes');
 console.log('OUTPUT: ' + sentence);
 
 if (sentencelenght < maxlenght) {
