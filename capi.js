@@ -3,9 +3,9 @@
 // github.com/luan004
 
 /* Insira na constante data o texto que será usado
-de base para a geração de um novo texto aleatório.
-quanto maior for seu texto, mais aleatório será o
-resultado. */
+de base para a geração de um novo texto aleatório,
+quanto maior for o texto data, mais aleatório será
+o resultado. */
 const data = '';
 
 /* Insira na constante input a palavra inicial do
