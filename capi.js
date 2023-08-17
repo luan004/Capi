@@ -32,6 +32,9 @@ const model = createModel(data);
 const sentence = go(input, model, 80);
 
 console.log('INPUT: ' + input + '\nRESULT: ' + sentence);
+if (sentence.length < maxlenght) {
+    console.log('WARNING: Não foi possível encontrar uma palavra para continuar a geração do texto.');
+}
 
 function go(fword, model, length) {
     let sentence = fword;
