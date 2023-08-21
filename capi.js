@@ -20,7 +20,7 @@ gerado, observe que o texto gerado poderá ser bem
 mais curto caso o algoritmo não consiga encontrar
 uma próxima palavra para continuar a geração, para
 evitar isso, use um texto base (data) extenso. */
-const maxlenght = 100; // em palavras
+const maxlenght = 50; // em palavras
 
 function createModel(data) {
     data = data.replace(/(\r\n|\n|\r)/gm, '');
@@ -49,7 +49,7 @@ function go(fword, model, length) {
         const allnexts = [];
         var index = 0;
         model.forEach(word => {
-            if (word == lastword) {
+            if (word == lastword && model[index+1] != undefined) {
                 allnexts.push(model[index+1]);
             }
             index++;
